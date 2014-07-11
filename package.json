@@ -1,5 +1,5 @@
 {
-    "name": "sigar",
+    "name": "sigar-prebuilt",
     "description": "Sigar binding for Node.js",
     "keywords": ["cluster", "system", "cpu", "os", "network"],
     "version": "0.0.2",

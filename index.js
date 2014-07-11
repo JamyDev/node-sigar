@@ -1,5 +1,5 @@
-
-var sigar = new require('./build/Release/sigar');
+var os = require("os");
+var sigar = new require('./bin/' + os.platform() + '/sigar');
 
 module.exports = function(){
 	return new sigar.NodeSigar;

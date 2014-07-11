@@ -24,7 +24,7 @@ console.log(sigar.version()); // returns the version
 
 // invoke the library
 var Sigar = sigar.init();
-console.log(sigar.cpu()); // {}
+console.log(Sigar.cpu()); // {}
 
 ```
 

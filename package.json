@@ -2,16 +2,16 @@
     "name": "sigar-prebuilt",
     "description": "Sigar binding for Node.js",
     "keywords": ["cluster", "system", "cpu", "os", "network"],
-    "version": "0.0.2",
+    "version": "0.0.3",
     "homepage": "http://www.adaltas.com/projects/node-sigar",
     "author": "David Worms <david@adaltas.com>",
     "repository": {
         "type": "git",
-        "url": "https://github.com/wdavidw/node-sigar.git"
+        "url": "https://github.com/JamyDev/node-sigar.git"
     },
     "bugs": {
-        "email": "open@adaltas.com",
-        "url": "https://github.com/wdavidw/node-sigar.git"
+        "email": "",
+        "url": "https://github.com/JamyDev/node-sigar.git"
     },
     "dependencies": {},
     "devDependencies": {
@@ -22,11 +22,12 @@
     },
     "contributors": [
         { "name": "Kenneth Bentley", "email": "funisher@gmail.com" },
-        { "name": "David Worms", "email": "david@adaltas.com" }
+        { "name": "David Worms", "email": "david@adaltas.com" },
+        { "name": "Jamy Timmermans", "email": "me@jamy.be" }
     ],
     "main": "index",
     "gypfile": true,
-    "engines": { "node": ">= 0.6.0" },
+    "engines": { "node": ">= 0.8.0" },
     "scripts": {
         "cmakenotworking": "mkdir -p build/sigar && cp -rp deps/sigar/* build/sigar/ && cd build/sigar && cmake -D CMAKE_BUILD_TYPE=Release -D BUILD_SHARED_LIBS=false . && cmake --build . && node-gyp configure && node-gyp build",
         "preinstall": "mkdir -p build/sigar && cp -rp deps/sigar/* build/sigar/ && cd build/sigar && ./autogen.sh && ./configure --prefix=`pwd`/build/sigar --with-pic && make && make install && cd ../.. && node-gyp configure && node-gyp build",
